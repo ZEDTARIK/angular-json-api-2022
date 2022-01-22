@@ -1,3 +1,38 @@
-<p>
-  employee-create works!
-</p>
+<div class="col-md-12">
+
+  <form [formGroup]="employeeForm" class="form-horizontal">
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h3 class="panel-title">Employee Form</h3>
+      </div>
+      <div class="panel-body">
+        
+        <div class="form-group">
+          <label class="col-sm-2 control-label" for="fullName">Full Name</label>
+          <div class="col-sm-6">
+            <input formControlName="fullName" type="text" class="form-control" placeholder="FullName" id="fullName">
+          </div>
+        </div>
+  
+        <div class="form-group">
+          <label class="col-sm-2 control-label" for="email">Email</label>
+          <div class="col-sm-6">
+            <input formControlName="email" type="email" class="form-control" placeholder="Email" id="email">
+          </div>
+        </div>
+  
+  
+      </div>
+      <div class="panel-footer">
+        <button class="btn btn-primary btn-sm">Save</button>
+      </div>
+    </div>
+  </form>
+
+
+  <pre>
+    {{ employeeForm.value | json }}
+  </pre>
+
+  
+</div>
