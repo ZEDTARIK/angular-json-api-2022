@@ -15,6 +15,11 @@ export class EmployeeCreateComponent implements OnInit {
     this.employeeForm = new FormGroup({
       fullName: new FormControl(),
       email: new FormControl(),
+      skills: new FormGroup({
+        skillName: new FormControl(),
+        experienceInYear: new FormControl(),
+        proficiency: new FormControl()
+      }),
     });
   }
 

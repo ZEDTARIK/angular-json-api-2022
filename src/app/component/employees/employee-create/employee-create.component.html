@@ -1,27 +1,57 @@
 <div class="col-md-12">
 
-  <form [formGroup]="employeeForm" class="form-horizontal">
+  <form [formGroup]="employeeForm" class="form-horizontal" autocomplete="off">
     <div class="panel panel-primary">
       <div class="panel-heading">
         <h3 class="panel-title">Employee Form</h3>
       </div>
       <div class="panel-body">
-        
+
         <div class="form-group">
           <label class="col-sm-2 control-label" for="fullName">Full Name</label>
           <div class="col-sm-6">
             <input formControlName="fullName" type="text" class="form-control" placeholder="FullName" id="fullName">
           </div>
         </div>
-  
+
         <div class="form-group">
           <label class="col-sm-2 control-label" for="email">Email</label>
           <div class="col-sm-6">
             <input formControlName="email" type="email" class="form-control" placeholder="Email" id="email">
           </div>
         </div>
-  
-  
+
+
+        <div formGroupName="skills">
+
+          <div class="form-group">
+            <label class="col-sm-2 control-label" for="skillName">Skill Name</label>
+            <div class="col-sm-4">
+              <input formControlName="skillName" type="text" class="form-control" placeholder="skill Name"
+                id="skillName">
+            </div>
+            <div class="col-sm-2">
+              <input formControlName="experienceInYear" type="number" class="form-control" placeholder="experience In Year"
+                id="experienceInYear">
+            </div>
+          </div>
+         
+
+
+          <div class="form-group">
+            <label class="col-sm-2 control-label" for="email">Proficiency</label>
+            <div class="col-sm-6">
+              <input type="radio" value="Beginner" formControlName="proficiency"> Beginner
+              <input type="radio" value="Intermediate" formControlName="proficiency"> Intermediate
+              <input type="radio" value="Advanced" formControlName="proficiency"> Advanced
+            </div>
+          </div>
+
+
+        </div>
+
+
+
       </div>
       <div class="panel-footer">
         <button class="btn btn-primary btn-sm">Save</button>
@@ -34,5 +64,5 @@
     {{ employeeForm.value | json }}
   </pre>
 
-  
+
 </div>
