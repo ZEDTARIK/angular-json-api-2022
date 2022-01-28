@@ -23,4 +23,19 @@ export class EmployeeCreateComponent implements OnInit {
     });
   }
 
+  // setValue = sert à modifier tous les champs , obliger d'ajouter fields
+  // pathValue = permet de modifier une partie de votre champs 
+  onLoadData() : void {
+    this.employeeForm.patchValue({
+      fullName: "Zouhair zettarak",
+      email: "ettarak@gmail.com",
+      skills: {
+        skillName: "C#",
+        experienceInYear: 2,
+        proficiency: "Beginner"
+      }
+
+    });
+  }
+
 }
